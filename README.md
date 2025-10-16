@@ -1,1 +1,5 @@
 # Ethan.Barrett_23127650_Mobile.Game
+PRESENTATION:
+SHOW CODE
+SHOW IMAGES FOR VISUALS 
+show github
