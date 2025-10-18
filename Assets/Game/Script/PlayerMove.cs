@@ -5,7 +5,7 @@ public class PlayerMove : MonoBehaviour
 {
     Vector2 move;
     public float speed = 5f;
-
+    public float rotationSpeed = 5f;
 
     public void InputPlayer(InputAction.CallbackContext _context)
     {
@@ -17,14 +17,18 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Vector3 Player = new Vector3(move.x, 0, move.y);
-        Player.Normalize();
-        transform.Translate(speed * Player * Time.deltaTime);
 
-       // if(Player != Vector3.zero)
-     //   {
-       //     float angle = Mathf.Atan2(move.x, move.y) * Mathf.Rad2Deg;
-       //     transform.rotation = Quaternion.Euler(0, angle, 0);
-       // }
+
+            if (Player.magnitude > 0.1f)
+            {
+                Player.Normalize();
+                transform.Translate(speed * Player * Time.deltaTime, Space.World);
+
+                Quaternion rotation = Quaternion.LookRotation(Player);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+
+            }
+       
         
 
     }
