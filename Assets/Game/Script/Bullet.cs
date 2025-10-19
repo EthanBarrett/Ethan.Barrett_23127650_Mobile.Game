@@ -9,7 +9,14 @@ public class Bullet : MonoBehaviour
     public float cooldown = 0.2f;
 
 
-        void Update()
+     void Start()
+    {
+
+
+    }
+
+
+    void Update()
     {
         TouchInput();
     }
@@ -20,15 +27,13 @@ public class Bullet : MonoBehaviour
         {
             Touch touch = Input.GetTouch(1);
 
-            if (touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Moved)
+            if (touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Stationary)
             {
                 if (canShoot())
                 {
                     Shoot();
                 }
-            }
-            
-            
+            }  
 
         }
 
@@ -44,12 +49,12 @@ public class Bullet : MonoBehaviour
         var bullet = Instantiate(bulletPrefab, bulletspawn.position, bulletspawn.rotation);
         bullet.GetComponent<Rigidbody>().linearVelocity = bulletspawn.forward * bulletspeed;
 
-        Destroy(bullet, 3f); 
+        Destroy(bullet, 2.5f); 
 
         lastShot = Time.time;
     }
 
-
+  
 
 
 }

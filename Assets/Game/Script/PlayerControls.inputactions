@@ -40,7 +40,7 @@
                 {
                     "name": "",
                     "id": "0bc92965-5364-42c8-b4c3-52734120bdef",
-                    "path": "<Touchscreen>/primaryTouch/press",
+                    "path": "<Touchscreen>/Press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
