@@ -16,7 +16,9 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 Player = new Vector3(move.x, 0, move.y);
+        
+
+            Vector3 Player = new Vector3(move.x, 0, move.y);
 
 
             if (Player.magnitude > 0.1f)
@@ -28,8 +30,8 @@ public class PlayerMove : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
 
             }
-       
+        }
         
 
-    }
+    
 }

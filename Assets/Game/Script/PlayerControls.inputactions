@@ -36,17 +36,6 @@
                     "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0bc92965-5364-42c8-b4c3-52734120bdef",
-                    "path": "<Touchscreen>/Press",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
