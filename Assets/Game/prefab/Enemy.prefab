@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 318408318926120736}
   PlayerObj: {fileID: 0}
-  speed: 3
+  speed: 4
   Health: 5
 --- !u!54 &-6476968263329368421
 Rigidbody:

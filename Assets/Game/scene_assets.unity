@@ -1334,6 +1334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationSpeed: 5
+  Health1: 5
+  Player1: {fileID: 726608274}
 --- !u!54 &726608281
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1358,9 +1360,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!1 &746183680
 GameObject:
   m_ObjectHideFlags: 0

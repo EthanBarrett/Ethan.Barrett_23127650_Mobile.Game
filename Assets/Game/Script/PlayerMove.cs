@@ -6,7 +6,8 @@ public class PlayerMove : MonoBehaviour
     Vector2 move;
     public float speed = 5f;
     public float rotationSpeed = 5f;
-
+    public float Health1 = 5;
+    public GameObject Player1;
     public void InputPlayer(InputAction.CallbackContext _context)
     {
         move = _context.ReadValue<Vector2>();
@@ -30,8 +31,23 @@ public class PlayerMove : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
 
             }
-        }
-        
 
-    
+            if (Health1 <= 0)
+            {
+                Destroy(Player1);
+            }
+
+        }
+
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Health1 -= 5;
+        }
+
+    }
+
 }
