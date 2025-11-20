@@ -6,7 +6,11 @@ public class EnemyMove : MonoBehaviour
     public GameObject PlayerObj;
     public float speed;
     public float Health = 5;
-     void Start()
+
+   [SerializeField] private ParticleSystem EnemyDeath;
+
+    private ParticleSystem EnemyDeathInstance;
+    void Start()
     {
         if (PlayerObj == null)
         {
@@ -25,6 +29,7 @@ public class EnemyMove : MonoBehaviour
         if (Health <= 0)
         {
             Destroy(Enemy);
+            SpawnParticals();
         }        
     }
 
@@ -35,5 +40,10 @@ public class EnemyMove : MonoBehaviour
             Health -= 5;
         }
         
+    }
+
+    void SpawnParticals()
+    {
+        EnemyDeathInstance = Instantiate(EnemyDeath, transform.position, Quaternion.identity);
     }
 }
