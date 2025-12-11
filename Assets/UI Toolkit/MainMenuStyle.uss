@@ -1,0 +1,16 @@
+.header {
+}
+
+.button {
+    background-image: url("project://database/Assets/Dark%20UI/Free/ButtonSmallRound.png?fileID=21300000&guid=04c64e19d8f8f0140837c8a6b21c358d&type=3#ButtonSmallRound");
+    transition-duration: 0.35s;
+    -unity-background-image-tint-color: rgb(255, 0, 0);
+    background-color: rgb(255, 0, 0);
+}
+
+.button:hover {
+    background-image: url("project://database/Assets/Dark%20UI/Free/ButtonSmallRound.png?fileID=21300000&guid=04c64e19d8f8f0140837c8a6b21c358d&type=3#ButtonSmallRound");
+    -unity-background-image-tint-color: rgb(255, 16, 0);
+    scale: 1.1 1.1;
+    background-color: rgb(255, 14, 0);
+}
