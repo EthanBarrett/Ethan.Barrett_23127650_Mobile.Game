@@ -8,6 +8,7 @@ dont need to show previous projects
 deminstration
 
 add unity ads
+itch.io
 
 checklist
 <img width="870" height="588" alt="image" src="https://github.com/user-attachments/assets/bc987908-5998-4b66-a30c-3c1f8b42a3ff" />
