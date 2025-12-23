@@ -20,3 +20,10 @@ checklist
 
 
 <img width="385" height="561" alt="image" src="https://github.com/user-attachments/assets/cafbe3c6-c62f-4db1-9dd3-09e9f627da37" />
+
+created a Main menu this is a first draft
+<img width="224" height="389" alt="image" src="https://github.com/user-attachments/assets/dcbef196-9452-4700-87d7-c913443debb3" />
+
+
+Death effects for enemys
+<img width="264" height="397" alt="image" src="https://github.com/user-attachments/assets/0893080d-18cd-4b1f-ab31-33aea290b8bd" />
