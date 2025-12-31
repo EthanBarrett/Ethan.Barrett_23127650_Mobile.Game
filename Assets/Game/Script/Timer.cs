@@ -9,15 +9,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (goneTime > 0)
-        {
-            goneTime += Time.deltaTime;
-        }
-        else if (goneTime < 0)
-        {
-            goneTime = 0;
-            timerText.color = Color.red;
-        }
+        
 
         goneTime += Time.deltaTime;
         int minutes = Mathf.FloorToInt(goneTime / 60);

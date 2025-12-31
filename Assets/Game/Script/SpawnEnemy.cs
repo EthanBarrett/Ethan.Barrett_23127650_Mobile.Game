@@ -22,6 +22,8 @@ public class SpawnEnemy : MonoBehaviour
             Spawn();
             spawnTime = spawncool;
         }
+
+
     }
 
     void Spawn()

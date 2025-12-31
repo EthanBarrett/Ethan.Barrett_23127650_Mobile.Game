@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 318408318926120736}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.994192, y: 0, z: 33.10954}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -153,6 +153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 318408318926120736}
   PlayerObj: {fileID: 0}
-  speed: 4
+  speed: 3
   Health: 5
   EnemyDeath: {fileID: 4835332996896202140, guid: 20fd220a912d28e4f92edde98fbb76d2, type: 3}
