@@ -19,6 +19,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         GamePlay.SetActive(false);
         Time.timeScale = 0f;
+        AdsManager.Instance.bannerAds.ShowBannerAd();
     }
 
     public void Resume()
@@ -26,7 +27,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         GamePlay.SetActive(true);
         Time.timeScale = 1f;
-
+        AdsManager.Instance.bannerAds.HideBannerAd();
     }
 
     public void Menu()

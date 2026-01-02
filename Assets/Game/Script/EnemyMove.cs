@@ -7,6 +7,8 @@ public class EnemyMove : MonoBehaviour
     public float speed;
     public float Health = 5;
 
+    
+
    [SerializeField] private ParticleSystem EnemyDeath;
 
     private ParticleSystem EnemyDeathInstance;
@@ -30,6 +32,7 @@ public class EnemyMove : MonoBehaviour
         {
             Destroy(Enemy);
             SpawnParticals();
+            print("enemy died");
         }        
     }
 
@@ -46,4 +49,6 @@ public class EnemyMove : MonoBehaviour
     {
         EnemyDeathInstance = Instantiate(EnemyDeath, transform.position, Quaternion.identity);
     }
+
+   
 }
