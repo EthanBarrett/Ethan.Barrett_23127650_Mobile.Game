@@ -27,3 +27,12 @@ created a Main menu this is a first draft
 
 Death effects for enemys
 <img width="264" height="397" alt="image" src="https://github.com/user-attachments/assets/0893080d-18cd-4b1f-ab31-33aea290b8bd" />
+
+
+gameover screen has been added 
+<img width="285" height="398" alt="image" src="https://github.com/user-attachments/assets/5cae53f5-f240-41e1-8c2a-05fe98203464" />
+
+camerashake has been added
+<img width="164" height="327" alt="image" src="https://github.com/user-attachments/assets/ed6f9d84-2285-44c9-9b07-3bb56468ad8d" />
+
+
