@@ -7,7 +7,7 @@ public class EnemyMove : MonoBehaviour
     public float speed;
     public float Health = 5;
 
-    
+    Rigidbody rb;
 
    [SerializeField] private ParticleSystem EnemyDeath;
 
@@ -26,6 +26,8 @@ public class EnemyMove : MonoBehaviour
         if (PlayerObj != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, PlayerObj.transform.position, speed * Time.deltaTime);
+
+           
         }
            
         if (Health <= 0)

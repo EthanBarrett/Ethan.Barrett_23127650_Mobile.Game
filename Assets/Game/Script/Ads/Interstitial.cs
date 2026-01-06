@@ -8,40 +8,53 @@ public class Interstitial : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
 
     private string adUnitId;
 
-   
+    private bool isLoaded;
 
   
 
-   private void Awake()
+    private void Awake()
     {
-        #if UNITY_IOS
-                adUnitId = iosAdUnityId;
-        #elif UNITY_ANDROID
-                adUnitId = androidAdUnitId;
+#if UNITY_IOS
+                adUnitId = iOSAdUnitId;
+#elif UNITY_ANDROID
+        adUnitId = androidAdUnitId;
         #endif
 
     }
 
     public void LoadInterstitalAd()
     {
+        if (isLoaded) return;
         Advertisement.Load(adUnitId, this);
     }
 
 
-    public void showAd()
+    public void showAdIntertitalAd()
     {
+        if(!isLoaded)
+        {
+            Debug.Log("intersitital not ready");
+            return;
+        }
         Advertisement.Show(adUnitId, this);
-        LoadInterstitalAd();
+        isLoaded = false;
     }
 
 
 
     public void OnUnityAdsAdLoaded(string placementId)
     {
+        if (placementId != adUnitId) return;
+
+        isLoaded = true;
         Debug.Log("Intersitial Ad Loaded");
     }
 
-    public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message) { }
+    public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message) 
+    {
+        isLoaded = false;
+        Debug.LogError($"Load failed: {error} - {message}");
+    }
 
 
     public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)  { }
@@ -50,6 +63,9 @@ public class Interstitial : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
 
     public void OnUnityAdsShowClick(string placementId)  { }
 
-    public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState) { }
+    public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState) 
+    {
+        LoadInterstitalAd();
+    }
 }
 

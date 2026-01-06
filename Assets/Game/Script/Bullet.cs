@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     private float lastShot = 0f;
      public float cooldown = 0.1f;
 
-    
+    [SerializeField] RecolieSHake recoilShake;
 
     
     /* void Update()
@@ -54,9 +54,14 @@ public class Bullet : MonoBehaviour
         Destroy(bullet, 2.5f); 
 
         lastShot = Time.time;
+
+       // CameraShake.instance.ShakeCamera(5f, 1f);
+
+        recoilShake.ScrreenShake();
     }
 
   
+
 
 
 }

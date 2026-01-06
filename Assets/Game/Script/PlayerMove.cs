@@ -6,13 +6,14 @@ public class PlayerMove : MonoBehaviour
     Vector2 move;
     public float speed = 5f;
     public float rotationSpeed = 5f;
-    public float Health1 = 5;
+    public float Health1 = 50f;
     public GameObject Player1;
     public void InputPlayer(InputAction.CallbackContext _context)
     {
         move = _context.ReadValue<Vector2>();
     }
 
+  
 
     // Update is called once per frame
     void Update()
@@ -29,25 +30,39 @@ public class PlayerMove : MonoBehaviour
 
                 Quaternion rotation = Quaternion.LookRotation(Player);
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
-
+                
             }
 
             if (Health1 <= 0)
             {
-                Destroy(Player1);
+             
+                Death();
+                
+                
             }
 
         }
 
 
 
-    void OnTriggerEnter(Collider other)
+     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
         {
-            Health1 -= 5;
+            Health1 -= 5f;
         }
 
+    }
+
+    public void Death()
+    {
+
+        GameOver.Instance.GameOverScreen();
+
+        // AdsManager.Instance.interstitial.showAdIntertitalAd();
+        // Debug.Log("Triggerd ad");
+
+        gameObject.SetActive(false);
     }
 
 }

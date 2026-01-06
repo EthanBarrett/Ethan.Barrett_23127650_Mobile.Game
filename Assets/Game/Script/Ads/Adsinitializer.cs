@@ -5,9 +5,9 @@ using UnityEngine.Advertisements;
 public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
 {
 
-    [SerializeField] string _androidGameId;
-    [SerializeField] string _iOSGameId;
-    [SerializeField] bool _testMode = true;
+    [SerializeField] private string _androidGameId;
+    [SerializeField] private string _iOSGameId;
+    [SerializeField] private bool _testMode = true;
     private string _gameId;
 
     void Awake()
@@ -34,7 +34,9 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     public void OnInitializationComplete()
     {
         Debug.Log("Unity Ads initialization complete.");
-        
+
+        AdsManager.Instance.OnAdsInitialized();
+
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)

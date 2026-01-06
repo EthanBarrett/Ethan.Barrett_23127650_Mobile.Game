@@ -3,9 +3,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+    public int gamePlayed = 1;
+
+  //  private bool isGameOver;
+
     private void Awake()
     {
         StartCoroutine(DisplayBannerWithDely());
+        AdsManager.Instance.bannerAds.HideBannerAd();
+        
     }
 
     private IEnumerator DisplayBannerWithDely()
@@ -14,9 +21,5 @@ public class GameManager : MonoBehaviour
         AdsManager.Instance.bannerAds.ShowBannerAd();
     }
 
-    private void Update()
-    {
-      // AdsManager.Instance.bannerAds.HideBannerAd();
-       
-    }
+   
 }
